@@ -6,7 +6,7 @@ import axios from 'axios';
 const AuthContext = createContext(null);
 
 // 2. Configure axios base URL
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 // 3. Provider component — wraps the whole app
 export const AuthProvider = ({ children }) => {
